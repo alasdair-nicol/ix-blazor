@@ -475,8 +475,9 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 ## Avatar
 
 ```razor
-<Avatar
-    Image="https://ui-avatars.com/api/?name=John+Doe">
+<Avatar Id="avatar-1" Initials="JB" Username="Joe Bloggs" Extra="Administrator">
+    <DropdownItem icon="user-settings" Label="User Settings"></DropdownItem>
+    <DropdownItem icon="log-out" Label="Logout"></DropdownItem>
 </Avatar>
 ```
 
