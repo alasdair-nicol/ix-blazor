@@ -1,0 +1,32 @@
+﻿@using SiemensIXBlazor.Components.Avatar
+@using SiemensIXBlazor.Components.Menu
+@using SiemensIXBlazor.Components.MenuCategory
+@using SiemensIXBlazor.Components
+@inherits LayoutComponentBase
+
+<div id="root">
+    <Application Id="app-1" @ref="_app">
+        <ApplicationHeader Name="My Application">
+            <div class="placeholder-logo" slot="logo">
+                <img id="logo" src="logo.svg" />
+            </div>
+            <Avatar Id="avatar-1" Initials="JB" Username="Joe Bloggs" Extra="Administrator">
+                <DropdownItem icon="user-settings" Label="User Settings"></DropdownItem>
+                <DropdownItem icon="log-out" Label="Logout"></DropdownItem>
+            </Avatar>
+        </ApplicationHeader>
+
+        <Menu Id="nav-menu-1" Expand="false">
+            <MenuItem Home="true" Icon="home">Home</MenuItem>
+            <MenuItem Icon="globe">Normal Tab</MenuItem>
+            <MenuCategory Label="Top level Category" Icon="rocket">
+                <MenuItem Icon="globe" >Nested Tab</MenuItem>
+                <MenuItem Icon="globe">Nested Tab</MenuItem>
+            </MenuCategory>
+        </Menu>
+
+        <Content>
+            @Body
+        </Content>
+    </Application>
+</div>

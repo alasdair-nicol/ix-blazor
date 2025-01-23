@@ -1,0 +1,21 @@
+﻿@page "/"
+@using SiemensIXBlazor.Enums.Button
+@using SiemensIXBlazor.Enums.DropdownButton
+@using SiemensIXBlazor.Components
+
+<ContentHeader
+    Slot="header"
+    Id="cont-head-1"
+    HeaderTitle="My Content Page"
+>
+</ContentHeader>
+
+<Button>Test Button</Button>
+
+<IconToggleButton Outline="true" Icon="checkboxes"></IconToggleButton>
+
+<DropdownButton Label="Dropdown" Variant="ButtonVariant.primary" Icon="checkboxes" Placement="DropdownButtonPlacement.bottom_end">
+    <DropdownItem Label="Item 1" Value="1"></DropdownItem>
+    <DropdownItem Label="Item 2" Value="2"></DropdownItem>
+    <DropdownItem Label="Item 3" Value="3"></DropdownItem>
+</DropdownButton>
