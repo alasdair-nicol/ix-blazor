@@ -14,8 +14,14 @@ namespace SiemensIXBlazor.Components.Avatar
     public partial class Avatar
     {
         [Parameter]
+        public RenderFragment? ChildContent { get; set; }
+        [Parameter]
+        public string? Extra { get; set; }
+        [Parameter]
         public string? Image { get; set; }
         [Parameter]
         public string? Initials { get; set; }
+        [Parameter]
+        public string? Username { get; set; }
     }
 }
